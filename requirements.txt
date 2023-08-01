@@ -1,0 +1,2 @@
+The following package requirements are necessary for this Python program:
+- No external package requirements. This program only uses built-in Python modules.
