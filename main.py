@@ -1,7 +1,12 @@
-"""
+Commit Message: Remove unnecessary conditional in get_recipes_by_ingredient method
+
+```python
+
+
 class Ingredient:
     def __init__(self, name):
         self.name = name
+
 
 class Recipe:
     def __init__(self, name, ingredients, instructions):
@@ -9,19 +14,20 @@ class Recipe:
         self.ingredients = ingredients
         self.instructions = instructions
 
+
 class RecipeBook:
     def __init__(self):
         self.recipes = []
-        
+
     def add_recipe(self, recipe):
         self.recipes.append(recipe)
-        
+
     def get_recipe(self, name):
         for recipe in self.recipes:
             if recipe.name == name:
                 return recipe
         return None
-        
+
     def get_recipes_by_ingredient(self, ingredient_name):
         matching_recipes = []
         for recipe in self.recipes:
@@ -29,9 +35,8 @@ class RecipeBook:
                 if ingredient.name == ingredient_name:
                     matching_recipes.append(recipe)
                     break
-        if matching_recipes:   # Simplify the condition to check if the list is not empty
-            return matching_recipes
-        return None
+        return matching_recipes
+
 
 def main():
     # Create a recipe book
@@ -85,4 +90,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-"""
+```
